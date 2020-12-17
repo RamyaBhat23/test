@@ -1,0 +1,110 @@
+<head>
+    <title>myapp</title>
+</head>
+
+<!-- <body> -->
+<!--_________________________________________________________default_____________________________________________________________________-->
+
+<!-- <h1>Welcome to Meteor!</h1>
+    {{> hello}} 
+    {{> info}} -->
+
+<!--_____________________________________________________iterating an object________________________________________________________________-->
+
+<!-- <ul>
+        {{#each items}} {{> item_name}} {{/each}}
+    </ul> -->
+
+<!--_____________________________________________________collections________________________________________________________________-->
+
+<!-- <ul>
+        {{ #each items }} {{> item_name}} {{/each}}
+    </ul> -->
+
+<!--_____________________________________________________forms________________________________________________________________-->
+
+<!-- {{>username}}
+
+    <ul>
+        {{#each usernames}} {{> namelist}} {{/each}}
+    </ul> -->
+
+<!-- </body> -->
+
+<!--_________________________________________________________default_____________________________________________________________________-->
+
+<!-- <template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template> -->
+
+<!-- <template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+  </ul>
+</template> -->
+
+<!--_____________________________________________________iterating an object________________________________________________________________-->
+
+<!-- <template name="item_name">
+    <li>{{item_name}}</li>
+</template> -->
+
+<!--_____________________________________________________collections________________________________________________________________-->
+
+<!-- <template name="item_name">
+    <li>{{ item_name }}</li>
+</template> -->
+
+<!--_____________________________________________________forms________________________________________________________________-->
+
+<!-- <template name="username">
+  <form class="username" method="POST">
+    <input type="text" name="user_name">
+    <input type="submit">
+  </form>
+</template>
+
+<template name="namelist">
+  <li>{{name}}</li>
+</template> -->
+
+<!--____________________________________________________routing_________________________________________________________________-->
+
+<body>
+    <!--static content. if we render any template here it is static-->
+</body>
+
+<template name="common">
+  <h1>header</h1>
+  <hr>
+  {{> home}}
+  <!--yield displays routed content-->
+  {{> yield}}
+  <h1>footer</h1>
+</template>
+
+<template name="home">
+  <a href="{{pathFor route='facebook'}}">facebook</a>
+  <a href="{{pathFor route='twitter'}}">twitter</a>
+  <a href="{{pathFor route='instagram'}}">instagram</a>
+</template>
+
+<template name="facebook">
+  <p>facebook</p>
+</template>
+
+<template name="twitter">
+  <p>twitter</p>
+</template>
+
+<template name="instagram">
+  <p>instagram</p>
+</template>
+
+<template name="welcome">
+  <!--empty template to avoid rendering of home template twice-->
+</template>
+
+<!---->
